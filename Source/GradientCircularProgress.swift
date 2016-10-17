@@ -118,10 +118,10 @@ extension GradientCircularProgress {
         }
         
         if let vc = progressViewController {
-            vc.dismiss(0.6)
+            vc.dismiss(0.1)
         }
         
-        cleanup(1.4, completionHandler: nil)
+        cleanup(0.1, completionHandler: nil)
     }
     
     public func dismiss(_ completionHandler: @escaping () -> Void) -> () {
@@ -130,10 +130,10 @@ extension GradientCircularProgress {
         }
         
         if let vc = progressViewController {
-            vc.dismiss(0.6)
+            vc.dismiss(0.1)
         }
         
-        cleanup(1.4) { Void in
+        cleanup(0.1) { Void in
             completionHandler()
         }
     }
@@ -224,7 +224,7 @@ extension GradientCircularProgress {
             return
         }
         
-        cleanup(0.8, view: view, completionHandler: nil)
+        cleanup(0.1, view: view, completionHandler: nil)
     }
     
     public func dismiss(progress view: UIView, completionHandler: @escaping () -> Void) -> () {
@@ -232,7 +232,7 @@ extension GradientCircularProgress {
             return
         }
         
-        cleanup(0.8, view: view) { Void in
+        cleanup(0.1, view: view) { Void in
             completionHandler()
         }
     }
